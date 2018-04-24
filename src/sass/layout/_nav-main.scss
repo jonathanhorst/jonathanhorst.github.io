@@ -1,0 +1,29 @@
+.nav-main {
+  align-self: flex-end;
+  transform: rotate(-90deg) translate(100%, 0);
+  transform-origin: right bottom;
+  .menu-item {
+    font-size: modular-scale(2);
+    font-weight: 700;
+    letter-spacing: 0.1414em;
+    display: inline-block;
+    margin: 0 $spacing-beta;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    &.work {
+      @include hide-visually;
+      @include respond-to('gamma') {
+        @include hide-visually("unhide");
+      }
+    }
+    &.contact {
+      @include respond-to('gamma') {
+        @include hide-visually;
+      }
+    }
+  }
+}

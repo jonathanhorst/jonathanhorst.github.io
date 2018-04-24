@@ -1,0 +1,11 @@
+.nav-footer {
+  .menu-item {
+    @include padding($spacing-gamma null);
+    font-size: modular-scale(1);
+    @include respond-to('gamma') {
+      display: inline;
+      @include padding(0 0 0 $spacing-beta);
+      font-size: modular-scale(0);
+    }
+  }
+}

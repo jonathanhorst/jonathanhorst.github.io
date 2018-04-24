@@ -1,0 +1,59 @@
+body {
+  font-size: $browser-context * 1px;
+  line-height: $modular-scale-ratio;
+}
+strong {
+  font-weight: 700;
+}
+.aside {
+  font-style: italic;
+}
+@include headings() {
+  @include margin((2em * $modular-scale-ratio) null (1em * $modular-scale-ratio) null);
+}
+@include link-colors(inherit, inherit, inherit, inherit);
+
+.content-section,
+[class^="nav-"] {
+  @include link-colors($color-dark, $color-dark, $color-dark-less, $color-dark-less);
+  a {
+    transition: all $duration-beta $function-alpha;
+    &:hover {
+      color: $color-dark-less;
+      border-color: $color-dark-less;
+    }
+  }
+}
+.content-section {
+  h2,
+  h3 {
+    font-size: modular-scale(2);
+  }
+  h2 {
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+  p,
+  ul,
+  hr {
+    font-size: modular-scale(1);
+    margin-bottom: 1em * $modular-scale-ratio;
+  }
+  li {
+    list-style: square outside;
+  }
+  a {
+    padding-bottom: 1em / 7;
+    border-bottom: solid $color-dark 2px;
+  }
+  hr {
+    width: 2em * $modular-scale-ratio;
+    margin-left: $spacing-neg-beta;
+    @include border-style(none none null none);
+    border-bottom: solid 0.4rem $color-dark;
+    @include respond-to('gamma') {
+      @include padding(3em null null null);
+    }
+  }
+}

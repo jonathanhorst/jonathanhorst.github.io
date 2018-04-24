@@ -1,0 +1,107 @@
+$browser-context: 10; // Default
+$modular-scale-ratio: $augmented-fourth;
+$bourbon: ( "modular-scale-base": 1.4rem,
+"modular-scale-ratio": $augmented-fourth,
+);
+
+$font-stack-alpha: 'Roboto',
+sans-serif;
+// $font-stack-beta:arial;
+// $font-stack-gamma:arial;
+// $font-stack-delta:arial;
+// $font-stack-bold:arial;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+$font-size-small: 0.75em;
+$font-size-alpha: 1em;
+$font-size-beta: 2em;
+$font-size-gamma: 3em;
+$font-size-delta: 4em;
+$font-size-epsilon: 5em;
+
+// colors
+$blue-romance: #d3f8dd;
+$martini: #baa1a9;
+$mountbatten-pink: #9c768b;
+$shakespeare: #60a3b9;
+$william: #50766d;
+$lust: #e5281a;
+$magenta: #fb67aa;
+$venice-blue: #295777;
+$winter-hazel: #d2c488;
+$stack: #8c918e;
+$tonys-pink: #eb9d8c;
+$wild-sand: #f4f4f4;
+$charcoal: #464646;
+$onahau: #c3e3ed;
+
+$color-dark: $charcoal;
+$color-dark-less: $stack;
+$color-light: $wild-sand;
+
+$color-alpha: $onahau;
+$color-beta: $tonys-pink;
+$color-gamma: $stack;
+$color-delta: $winter-hazel;
+$color-epsilon: $venice-blue;
+
+// spacing for margin, padding, etc
+$spacing-alpha: calc((1.4rem + 7vw) / (1.414 * 6));
+$spacing-beta: calc((1.4rem + 7vw) / (1.414 * 4));
+$spacing-gamma: calc((1.4rem + 7vw) / (1.414 * 2));
+$spacing-delta: calc((1.4rem + 7vw) / 1.414);
+$spacing-epsilon: calc((1.4rem + 7vw));
+$spacing-zeta: calc((1.4rem + 7vw) * 1.414);
+$spacing-eta: calc((1.4rem + 7vw) * 1.414 * 2);
+$spacing-theta: calc((1.4rem + 7vw) * 1.414 * 3);
+
+$spacing-neg-alpha: calc(-1 * (1.4rem + 7vw) / (1.414 * 6));
+$spacing-neg-beta: calc(-1 * (1.4rem + 7vw) / (1.414 * 4));
+$spacing-neg-gamma: calc(-1 * (1.4rem + 7vw) / (1.414 * 2));
+$spacing-neg-delta: calc(-1 * (1.4rem + 7vw) / 1.414);
+$spacing-neg-epsilon: calc(-1 * (1.4rem + 7vw));
+$spacing-neg-zeta: calc(-1 * (1.4rem + 7vw) * 1.414);
+$spacing-neg-eta: calc(-1 * (1.4rem + 7vw) * 1.414 * 2);
+$spacing-neg-theta: calc(-1 * (1.4rem + 7vw) * 1.414 * 3);
+
+// break points
+$break-alpha: 300px;
+$break-beta: 600px;
+$break-gamma: 800px;
+$break-delta: 1200px;
+$break-epsilon: 1920px;
+
+$breakpoints: ( 'alpha': $break-alpha,
+'beta': $break-beta,
+'gamma': $break-gamma,
+'delta': $break-delta,
+'epsilon': $break-epsilon);
+
+$social-icon-alpha: 1.6rem;
+$social-icon-beta: 3rem;
+
+// duration
+$duration-alpha: 100ms;
+$duration-beta: 200ms;
+$duration-gamma: 300ms;
+$duration-delta: 400ms;
+
+// transition timing functions
+$function-alpha: ease-in;
+$function-beta: ease-out;
+$function-gamma: linear;
+
+// columns
+$column-alpha: 100vw;
+$column-beta: 50vw;
+$column-gamma: 3333.3333vw;
+$column-delta: 25vw;
+$column-epsilon: 20vw;
+$column-zeta: 16.6667vw;
+$column-eta: 14.2857vw;
+
+// SpinKit - https://github.com/tobiasahlin/SpinKit/
+$spinkit-spinner-margin: 40px auto !default;
+$spinkit-size: 40px !default;
+$spinkit-spinner-color: #333 !default;

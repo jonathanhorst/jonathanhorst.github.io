@@ -1,0 +1,11 @@
+header.header {
+  @include position(fixed, null null 0 null);
+  @include padding(null $spacing-gamma $spacing-epsilon $spacing-gamma);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  h1 {
+    @include hide-visually;
+  }
+}

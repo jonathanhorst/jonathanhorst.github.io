@@ -1,0 +1,27 @@
+html {
+  font-size: strip-unit($browser-context / 16) * 100%;
+  font-family: Roboto;
+}
+main {
+  @include containerSpacing();
+}
+.cover-height {
+  min-height: 100vh;
+}
+.cover-width {
+  min-width: 100vw;
+}
+.cover-full {
+  @extend .cover-height;
+  @extend .cover-width;
+}
+.center-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @include margin(auto null);
+}
+.center-flex-cover {
+  @extend .cover-full;
+  @extend .center-flex;
+}
