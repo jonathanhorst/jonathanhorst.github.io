@@ -1,6 +1,6 @@
 footer {
   $this: &;
-  @include margin($spacing-eta $spacing-zeta);
+  @include margin($spacing-delta $spacing-zeta);
   text-align: center;
   @include respond-to('beta') {
     @include margin($spacing-delta);
