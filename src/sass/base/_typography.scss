@@ -52,8 +52,11 @@ strong {
     margin-left: $spacing-neg-beta;
     @include border-style(none none null none);
     border-bottom: solid 0.4rem $color-dark;
-    @include respond-to('gamma') {
-      @include padding(3em null null null);
-    }
+    @media (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      @include border-width(null null 0.35rem null);
+    } // @  include respond-to('gamma') {
+    //   @include padding(3em null null null);
+    // }
   }
 }
