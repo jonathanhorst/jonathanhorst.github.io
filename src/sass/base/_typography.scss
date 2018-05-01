@@ -40,6 +40,12 @@ strong {
     font-size: modular-scale(1);
     margin-bottom: 1em * $modular-scale-ratio;
   }
+  ul {
+    ul {
+      margin-bottom: 0;
+      margin-left: 1em;
+    }
+  }
   li {
     list-style: square outside;
   }
