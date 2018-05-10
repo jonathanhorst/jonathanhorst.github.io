@@ -6,24 +6,25 @@
     font-size: modular-scale(2);
     font-weight: 700;
     letter-spacing: 0.1414em;
-    display: inline-block;
-    margin: 0 $spacing-beta;
-    &:first-child {
-      margin-left: 0;
-    }
-    &:last-child {
-      margin-right: 0;
-    }
-    &.work {
-      @include hide-visually;
-      @include respond-to('gamma') {
-        @include hide-visually("unhide");
+    @include respond-to('gamma') {
+      display: inline-block;
+      margin: 0 $spacing-beta;
+      &:first-child {
+        margin-left: 0;
       }
-    }
-    &.contact {
-      @include respond-to('gamma') {
-        @include hide-visually;
+      &:last-child {
+        margin-right: 0;
       }
-    }
+    } //   &.work {
+    //   @include hide-visually;
+    //   @include respond-to('gamma') {
+    //     @include hide-visually("unhide");
+    //   }
+    // }
+    // &.contact {
+    //   @include respond-to('gamma') {
+    //     @include hide-visually;
+    //   }
+    // }
   }
 }

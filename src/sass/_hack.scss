@@ -1,0 +1,89 @@
+.wrapper-images {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+#work-baldwin {
+  .wrapper-images {
+    @include respond-to('gamma') {
+      display: block;
+      @include margin($spacing-epsilon $spacing-neg-alpha null $spacing-neg-alpha);
+      &:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      img {
+        float: left;
+        @include padding(null $spacing-alpha);
+      }
+    }
+  }
+  img {
+    margin-bottom: $spacing-delta;
+    &:nth-of-type(1) {
+      @include respond-to('gamma') {
+        max-width: 33.33%;
+        margin-top: $spacing-epsilon;
+      }
+      @include respond-to('delta') {
+        max-width: 14.285714286% * 2;
+      }
+    }
+    &:nth-of-type(2) {
+      @include respond-to('gamma') {
+        max-width: 66.66%;
+        margin-bottom: $spacing-theta;
+      }
+      @include respond-to('delta') {
+        max-width: 14.285714286% * 4;
+      }
+    }
+    &:nth-of-type(3) {
+      @include respond-to('gamma') {
+        max-width: 66.66%;
+      }
+      @include respond-to('delta') {
+        max-width: 14.285714286% * 4;
+        margin-left: 14.285714286%;
+      }
+    }
+    &:nth-of-type(4) {
+      @include respond-to('gamma') {
+        @include padding($spacing-beta null);
+      }
+      @include respond-to('delta') {
+        max-width: 14.285714286% * 5;
+        margin-left: 14.285714286% * 1;
+      }
+    }
+    &:nth-of-type(5) {
+      @include respond-to('gamma') {
+        max-width: 66.66%;
+        margin-top: $spacing-zeta;
+      }
+      @include respond-to('delta') {
+        max-width: 14.285714286% * 4;
+        margin-left: 14.285714286%;
+      }
+    }
+    &:nth-of-type(6) {
+      @include respond-to('gamma') {
+        max-width: 33.33%;
+      }
+      @include respond-to('delta') {
+        max-width: 14.285714286% * 2;
+      }
+    }
+    &:nth-of-type(7) {
+      @include respond-to('gamma') {
+        // max-width: 66.66%;
+      }
+    }
+  }
+}
