@@ -40,4 +40,7 @@ $(document).ready(function() {
   // lazy load
   const observer = lozad(); // lazy loads elements with default selector as ".lozad"
   observer.observe();
+  const coolImage = document.querySelector('.image-to-load-first')
+  // ... trigger the load of a image before it appears on the viewport
+  observer.triggerLoad(coolImage);
 });
