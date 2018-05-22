@@ -21,10 +21,10 @@
     //     @include hide-visually("unhide");
     //   }
     // }
-    // &.contact {
-    //   @include respond-to('gamma') {
-    //     @include hide-visually;
-    //   }
-    // }
+    &.contact {
+      @include respond-to('gamma') {
+        @include hide-visually;
+      }
+    }
   }
 }
