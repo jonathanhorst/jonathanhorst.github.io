@@ -1,0 +1,40 @@
+.work {}
+#work-photography {
+  h2 {
+    font-weight: $font-weight-bold;
+    margin-bottom: $spacing-gamma;
+    @include respond-to('gamma') {
+      margin-left: 14.285714286%;
+      padding-left: $spacing-alpha;
+    }
+  }
+  h3 {
+    @include respond-to('gamma') {
+      margin-left: 14.285714286%;
+      padding-left: $spacing-alpha;
+    }
+    margin-top: $spacing-epsilon;
+    margin-bottom: $spacing-gamma;
+    &:first-of-type {
+      margin-top: $spacing-gamma;
+    }
+  }
+  .nav-section {
+    @include respond-to('beta') {
+      margin-left: 14.285714286%;
+    }
+    @include respond-to('gamma') {
+      margin-left: 14.285714286%;
+      padding-left: $spacing-delta;
+      font-size: modular-scale(0);
+    }
+    li {
+      display: inline-block;
+      margin-right: $modular-scale-ratio * 1em;
+      list-style-type: none;
+      font-family: $font-stack-beta;
+      letter-spacing: 0.1414em;
+      line-height: 1.999396;
+    }
+  }
+}

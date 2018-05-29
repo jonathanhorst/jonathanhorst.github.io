@@ -5,6 +5,10 @@ html {
 main {
   @include containerSpacing();
 }
+.wrapper-bleed {
+  @include containerSpacing($margin: false, $bleed: true);
+  @include padding(null $spacing-delta);
+}
 .cover-height {
   min-height: 100vh;
 }
@@ -24,4 +28,43 @@ main {
 .center-flex-cover {
   @extend .cover-full;
   @extend .center-flex;
+}
+.content-section {
+  margin-bottom: $spacing-zeta;
+  padding-top: $spacing-zeta;
+  &.hero-section {
+    @include respond-to('beta') {
+      min-height: 100vh;
+      @include center-flex;
+      padding: 0;
+      h2 {
+        margin-top: 0;
+      }
+    }
+  }
+}
+.nav-sub {
+  @include margin(null $spacing-neg-gamma);
+  @include respond-to('beta') {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  li {
+    @include margin(1em $spacing-gamma null $spacing-gamma);
+    list-style: none;
+    flex-grow: 1;
+    font-size: modular-scale(1);
+    font-family: $font-stack-beta;
+      // letter-spacing: 0.1414em;
+    @include respond-to('beta') {
+      // min-width: 50%;
+      &:nth-of-type(even) {
+        text-align: right;
+      }
+    }
+  }
+  a {
+    // font-weight: 700;
+  }
 }

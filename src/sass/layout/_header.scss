@@ -1,11 +1,21 @@
 header.header {
-  @include position(fixed, null null 0 null);
+  @include position(fixed, null 0 0 0);
   @include padding(null $spacing-gamma $spacing-epsilon $spacing-gamma);
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  transition-duration: 400ms;
+  transition-delay: 100ms;
   h1 {
     @include hide-visually;
+  }
+  .is-scrolling & {
+    @include margin(null $spacing-neg-eta);
+    @include padding(null 0);
+    transition-delay: 800ms;
+    @include respond-to('gamma') {
+      @include padding(null $spacing-gamma $spacing-epsilon $spacing-gamma);
+      @include margin(0);
+    }
   }
 }

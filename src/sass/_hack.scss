@@ -2,54 +2,56 @@
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-
   img {
     max-width: 100%;
     height: auto;
   }
 }
-#work-baldwin {
-  .wrapper-images {
-    @include respond-to('gamma') {
-      display: block;
-      @include margin($spacing-epsilon $spacing-neg-alpha null $spacing-neg-alpha);
-      &:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
-      img {
-        float: left;
-        @include padding(null $spacing-alpha);
-      }
+.wrapper-images {
+  @include block();
+  @include respond-to('gamma') {
+    @include padding($spacing-epsilon $spacing-neg-alpha null $spacing-neg-alpha);
+    img {
+      float: left;
+      @include padding(null $spacing-alpha);
     }
   }
   img {
-    margin-bottom: $spacing-delta;
+    @include margin($spacing-alpha null);
+    @include respond-to('delta') {
+      @include margin(0 null $spacing-zeta null);
+    }
+  }
+}
+#work-web-baldwin {
+  img {
+    @include respond-to('gamma') {
+      @include margin(0 null $spacing-delta null);
+    }
     &:nth-of-type(1) {
       @include respond-to('gamma') {
-        max-width: 33.33%;
+        width: 33.33%;
         margin-top: $spacing-epsilon;
       }
       @include respond-to('delta') {
-        max-width: 14.285714286% * 2;
+        width: 14.285714286% * 2;
       }
     }
     &:nth-of-type(2) {
       @include respond-to('gamma') {
-        max-width: 66.66%;
+        width: 66.66%;
         margin-bottom: $spacing-theta;
       }
       @include respond-to('delta') {
-        max-width: 14.285714286% * 4;
+        width: 14.285714286% * 4;
       }
     }
     &:nth-of-type(3) {
       @include respond-to('gamma') {
-        max-width: 66.66%;
+        width: 66.66%;
       }
       @include respond-to('delta') {
-        max-width: 14.285714286% * 4;
+        width: 14.285714286% * 4;
         margin-left: 14.285714286%;
       }
     }
@@ -58,31 +60,281 @@
         @include padding($spacing-beta null);
       }
       @include respond-to('delta') {
-        max-width: 14.285714286% * 5;
+        width: 14.285714286% * 5;
         margin-left: 14.285714286% * 1;
       }
     }
     &:nth-of-type(5) {
       @include respond-to('gamma') {
-        max-width: 66.66%;
+        width: 66.66%;
         margin-top: $spacing-zeta;
       }
       @include respond-to('delta') {
-        max-width: 14.285714286% * 4;
+        width: 14.285714286% * 4;
         margin-left: 14.285714286%;
       }
     }
     &:nth-of-type(6) {
       @include respond-to('gamma') {
-        max-width: 33.33%;
+        width: 33.33%;
       }
       @include respond-to('delta') {
-        max-width: 14.285714286% * 2;
+        width: 14.285714286% * 2;
+      }
+    }
+    &:nth-of-type(7) {
+      width: 100%;
+    }
+  }
+}
+#work-photography-hebel-i {
+  img {
+    &:nth-of-type(1) {
+      @include respond-to('gamma') {
+        width: 50%;
+      }
+      @include respond-to('delta') {}
+    }
+    &:nth-of-type(2) {
+      @include respond-to('gamma') {
+        width: 50%;
+      }
+      @include respond-to('delta') {
+        width: 14.285714286% * 3;
+        margin-top: $spacing-epsilon;
+      }
+    }
+    &:nth-of-type(3) {
+      @include respond-to('delta') {
+        width: 14.285714286% * 6;
+        margin-left: 14.285714286%;
+      }
+    }
+    &:nth-of-type(4) {
+      @include respond-to('gamma') {
+        width: 50%;
+      }
+      @include respond-to('delta') {
+        width: 14.285714286% * 3;
+      }
+    }
+    &:nth-of-type(5) {
+      @include respond-to('gamma') {
+        width: 50%;
+      }
+      @include respond-to('delta') {
+        width: 14.285714286% * 3;
+      }
+    }
+    &:nth-of-type(6) {
+      @include respond-to('delta') {
+        width: 14.285714286% * 3;
+        margin-left: 14.285714286% * 2;
       }
     }
     &:nth-of-type(7) {
       @include respond-to('gamma') {
-        // max-width: 66.66%;
+        width: 50%;
+      }
+      @include respond-to('delta') {
+        width: 14.285714286% * 3;
+        margin-left: 14.285714286%;
+      }
+    }
+    &:nth-of-type(8) {
+      @include respond-to('gamma') {
+        width: 50%;
+      }
+      @include respond-to('delta') {
+        width: 14.285714286% * 3;
+      }
+    }
+    &:nth-of-type(9) {
+      @include respond-to('delta') {
+        width: 14.285714286% * 6;
+      }
+    }
+  }
+}
+#work-photography-hebel-ii {
+  img {
+    &:nth-of-type(1) {
+      @include respond-to('delta') {
+        width: 14.285714286% * 5;
+        margin-left: 14.285714286%;
+      }
+    }
+    &:nth-of-type(2) {
+      @include respond-to('delta') {
+        width: 14.285714286% * 6;
+        margin-left: 14.285714286%;
+      }
+    }
+    &:nth-of-type(3) {
+      @include respond-to('delta') {
+        width: 14.285714286% * 6;
+      }
+    }
+    &:nth-of-type(4) {
+      @include respond-to('delta') {
+        width: 50%;
+      }
+    }
+    &:nth-of-type(5) {
+      @include respond-to('delta') {
+        width: 50%;
+      }
+    }
+    &:nth-of-type(7) {
+      @include respond-to('delta') {
+        width: 14.285714286% * 6;
+        margin-left: 14.285714286%;
+      }
+    }
+    &:nth-of-type(8) {
+      @include respond-to('delta') {
+        width: 14.285714286% * 6;
+      }
+    }
+    &:nth-of-type(9) {
+      @include respond-to('delta') {
+        width: 14.285714286% * 5;
+        margin-left: 14.285714286%;
+      }
+    }
+  }
+}
+#work-photography-travel {
+  img {
+    &:nth-of-type(1) {
+      @include respond-to('delta') {
+        width: 14.285714286% * 6;
+        margin-left: 14.285714286%;
+      }
+    }
+    &:nth-of-type(2) {
+      @include respond-to('delta') {
+        width: 14.285714286% * 5;
+        margin-left: 14.285714286%;
+      }
+    }
+    &:nth-of-type(4) {
+      @include respond-to('delta') {
+        width: 14.285714286% * 4;
+        margin-left: 14.285714286% * 2;
+      }
+    }
+    &:nth-of-type(5) {
+      @include respond-to('delta') {
+        width: 14.285714286% * 6;
+        margin-left: 14.285714286%;
+      }
+    }
+    &:nth-of-type(6) {
+      @include respond-to('delta') {
+        width: 14.285714286% * 4;
+        margin-left: 14.285714286%;
+      }
+    }
+  }
+}
+#work-photography-places {
+  img {
+    &:nth-of-type(2) {
+      @include respond-to('delta') {
+        width: 14.285714286% * 6;
+        margin-left: 14.285714286%;
+      }
+    }
+    &:nth-of-type(3) {
+      @include respond-to('gamma') {
+        width: 33%;
+      }
+    }
+    &:nth-of-type(4) {
+      @include respond-to('gamma') {
+        width: 33%;
+      }
+    }
+    &:nth-of-type(5) {
+      @include respond-to('gamma') {
+        width: 33%;
+      }
+    }
+    &:nth-of-type(7) {
+      @include respond-to('delta') {
+        width: 14.285714286% * 6;
+      }
+    }
+    &:nth-of-type(9) {
+      @include respond-to('delta') {
+        width: 14.285714286% * 5;
+        margin-left: 14.285714286%;
+      }
+    }
+    &:nth-of-type(10) {
+      @include respond-to('delta') {
+        width: 14.285714286% * 6;
+        margin-left: 14.285714286%;
+      }
+    }
+  }
+}
+@include respond-to('delta') {
+
+  #work-photography-people {
+    img {
+      &:nth-of-type(1) {
+        // @include respond-to('delta') {
+        width: 14.285714286% * 5;
+        margin-left: 14.285714286%; // }
+      }
+      &:nth-of-type(2) {
+        // @include respond-to('delta') {
+        width: 14.285714286% * 3;
+        margin-top: $spacing-epsilon; // }
+      }
+      &:nth-of-type(3) {
+        // @include respond-to('delta') {
+        width: 14.285714286% * 4; // }
+      }
+      &:nth-of-type(4) {
+        // @include respond-to('delta') {
+        width: 14.285714286% * 5;
+        margin-left: 14.285714286%; // }
+      }
+      &:nth-of-type(5) {
+        // @include respond-to('delta') {
+        width: 14.285714286% * 3;
+        margin-top: $spacing-eta; // }
+      }
+      &:nth-of-type(6) {
+        // @include respond-to('delta') {
+        width: 14.285714286% * 4; // }
+      }
+      &:nth-of-type(7) {
+        // @include respond-to('delta') {
+        width: 14.285714286% * 5;
+        margin-left: 14.285714286%; // }
+      }
+      &:nth-of-type(8) {
+        // @include respond-to('delta') {
+        width: 14.285714286% * 3;
+        margin-left: 14.285714286% * 2; // }
+      }
+      &:nth-of-type(9) {
+        // @include respond-to('delta') {
+        width: 14.285714286% * 6; // }
+      }
+      &:nth-of-type(10) {
+        // @include respond-to('delta') {
+        width: 14.285714286% * 3;
+        margin-left: 14.285714286%; // }
+      }
+      &:nth-of-type(11) {
+        // @include respond-to('delta') {
+        width: 14.285714286% * 3;
+        margin-top: $spacing-delta; // }
       }
     }
   }

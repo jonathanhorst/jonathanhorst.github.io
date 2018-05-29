@@ -1,57 +1,7 @@
 .home {
-  .content-section {
-    margin-bottom: $spacing-zeta;
-    padding-top: $spacing-zeta;
-    &:first-of-type {
-      @include respond-to('beta') {
-        margin-bottom: $spacing-eta;
-      }
-      @include respond-to('beta') {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: auto 0;
-        padding: 0;
-        h2 {
-          margin-top: 0;
-        }
-      }
-    }
-    &:nth-of-type(n+2) {}
+  .nav-main .jonathan {
     @include respond-to('gamma') {
-      margin-bottom: $spacing-epsilon;
-      padding-top: $spacing-epsilon;
-    }
-    blockquote {
-      font-size: modular-scale(3);
-      text-align: right;
-      font-weight: 700;
-      font-style: italic;
-    }
-    &>*:last-child {
-      margin-bottom: 0;
-      padding-bottom: 0;
-    }
-  }
-  .nav-sub {
-    @include margin(null $spacing-neg-gamma);
-    @include respond-to('beta') {
-      display: flex;
-    }
-    li {
-      @include margin(1em $spacing-gamma null $spacing-gamma);
-      list-style: none;
-      flex-grow: 1;
-      font-size: modular-scale(1);
-      @include respond-to('beta') {
-        &:nth-of-type(even) {
-          text-align: right;
-        }
-      }
-    }
-    a {
-      font-weight: 700;
+      @include hide-visually;
     }
   }
 }
