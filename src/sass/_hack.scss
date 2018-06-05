@@ -339,3 +339,9 @@
     }
   }
 }
+
+img.wallpaper {
+  border-style: solid;
+border-width: 6.2rem;
+border-image: url("/dist/img/devices/iPhone/iPhone X.svg") 62 62 62 fill repeat;
+}
