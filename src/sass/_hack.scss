@@ -280,6 +280,14 @@
     }
   }
 }
+.work.product-photography {
+  #work {
+    margin-bottom: 0;
+  }
+  #work-photography {
+    padding-top: $spacing-beta;
+  }
+}
 @include respond-to('delta') {
   #work-photography-people {
     img {
