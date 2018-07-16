@@ -19,23 +19,4 @@
       margin-top: $spacing-gamma;
     }
   }
-  .nav-section {
-    float: left;
-    @include respond-to('beta') {
-      margin-left: 14.285714286%;
-    }
-    @include respond-to('gamma') {
-      margin-left: 14.285714286%;
-      padding-left: $spacing-delta;
-      font-size: modular-scale(0);
-    }
-    li {
-      display: inline-block;
-      margin-right: $modular-scale-ratio * 1em;
-      list-style-type: none;
-      font-family: $font-stack-beta;
-      letter-spacing: 0.1414em;
-      line-height: 1.999396;
-    }
-  }
 }

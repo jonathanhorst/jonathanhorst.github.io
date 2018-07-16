@@ -43,6 +43,9 @@ main {
     }
   }
 }
+.title-section {
+  padding-top: $spacing-zeta;
+}
 .nav-sub {
   @include margin(null $spacing-neg-gamma);
   @include respond-to('beta') {
@@ -55,16 +58,36 @@ main {
     list-style: none;
     flex-grow: 1;
     font-size: modular-scale(1);
-    font-family: $font-stack-beta;
-      // letter-spacing: 0.1414em;
+    font-family: $font-stack-beta; // letter-spacing: 0.1414em;
     @include respond-to('beta') {
       // min-width: 50%;
       &:nth-of-type(even) {
         text-align: right;
       }
     }
+  } // a {
+  // font-weight: 700;
+  // }
+}
+.nav-section {
+  float: left;
+  @include respond-to('gamma') {
+    font-size: modular-scale(0);
   }
-  a {
-    // font-weight: 700;
+  @root #work-photography & {
+    @include respond-to('beta') {
+      @include margin(null 14.285714286% null 14.285714286%);
+    }
+    @include respond-to('gamma') {
+      @include padding(null $spacing-delta null $spacing-delta);
+    }
+  }
+  li {
+    display: inline-block;
+    margin-right: $modular-scale-ratio * 1em;
+    list-style-type: none;
+    font-family: $font-stack-beta;
+    letter-spacing: 0.1414em;
+    line-height: 1.999396;
   }
 }

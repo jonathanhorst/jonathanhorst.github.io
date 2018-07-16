@@ -13,7 +13,7 @@ strong {
 }
 @include link-colors(inherit, inherit, inherit, inherit);
 
-.content-section,
+main,
 [class^="nav-"] {
   @include link-colors($color-dark, $color-dark, $color-dark-less, $color-dark-less);
   a {
@@ -24,7 +24,7 @@ strong {
     }
   }
 }
-.content-section {
+main {
   h2,
   h3 {
     font-size: modular-scale(2);
@@ -39,6 +39,9 @@ strong {
   hr {
     font-size: modular-scale(1);
     margin-bottom: 1em * $modular-scale-ratio;
+  }
+  small {
+    font-size: 0.8em;
   }
   ul {
     ul {
@@ -66,9 +69,17 @@ strong {
     // }
   }
   blockquote {
-    font-size: modular-scale(3);
+    // font-size: modular-scale(3);
     text-align: right;
-    font-weight: 700;
-    font-style: italic;
+
+    p {
+      font-weight: 200;
+      font-style: italic;
+      line-height: modular-scale(3);
+    }
+    cite {
+      font-family: "Roboto Mono", sans-serif;
+      font-size: $modular-scale-ratio * 1rem;
+    }
   }
 }

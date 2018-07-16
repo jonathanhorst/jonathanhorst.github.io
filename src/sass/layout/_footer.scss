@@ -1,4 +1,4 @@
-footer {
+footer.footer-main {
   $this: &;
   @include margin($spacing-delta $spacing-zeta);
   text-align: center;
