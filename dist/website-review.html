@@ -48,6 +48,8 @@
     a.appendChild(r);
   })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
   </script>
+  <!-- Stripe.js -->
+  <script src="https://js.stripe.com/v3"></script>
 </head>
 
 <body class="sales-page">
@@ -60,9 +62,9 @@
         </g>
       </svg>
     </a>
-      <button id="checkout-button-sku_FMgzePsAsBCM9g" role="link" class="small">
-        Order Your Website Review
-      </button>
+    <button id="checkout-button-1-sku_FMgzePsAsBCM9g" role="link" class="small">
+      Order Your Website Review
+    </button>
     <!-- <nav class="nav-main">
       <ul>
         <li class="menu-item jonathan"><a href="/about.html">Jonathan</a></li>
@@ -166,7 +168,7 @@
       <p>There are no <strong>magic</strong> bullets.</p>
       <p>Website Reviews are a wonderful way for you to to get specific, actionable advice on what to fix (and what can stay the same) on your website.</p>
       <p>You&#8217;ll still need to do the work.</p>
-       <!-- <h3>&#8220;How long will the video recording be?&#8221;</h3>
+      <!-- <h3>&#8220;How long will the video recording be?&#8221;</h3>
       <p>This isn&#8217;t a live teardown, it&#8217;s a recording you&#8217;ll receive.</p>
       <p>The recording is typically ~30&#8211;60 minutes long.</p>
      <h3>Order your Website Review today</h3>
@@ -230,35 +232,70 @@
 
   gtag('config', 'UA-48698625-1');
   </script>
-  <!-- Stripe.js -->
-  <script src="https://js.stripe.com/v3"></script>
+  <!-- <script>
+  var stripe = Stripe('pk_test_lIB6pp6fjnpOmW5mObe0WIAI');
+
+  var checkoutButtonList = ['checkout-button-1-sku_FMgzePsAsBCM9g', 'checkout-button-2-sku_FMgzePsAsBCM9g', 'checkout-button-3-sku_FMgzePsAsBCM9g'];
+
+  for (var i = 0; i < checkoutButtonList.length; i++) {
+    var checkoutButton = document.getElementById(checkoutButtonList[i]);
+
+    checkoutButton.addEventListener('click', function() {
+      // When the customer clicks on the button, redirect
+      // them to Checkout.
+      stripe.redirectToCheckout({
+          items: [{ sku: 'sku_FMwLgwIeILbYmg', quantity: 1 }],
+
+          // Do not rely on the redirect to the successUrl for fulfilling
+          // purchases, customers may not always reach the success_url after
+          // a successful payment.
+          // Instead use one of the strategies described in
+          // https://stripe.com/docs/payments/checkout/fulfillment
+          successUrl: 'https://jonathanhorst.co/success',
+          cancelUrl: 'https://jonathanhorst.co/canceled',
+        })
+        .then(function(result) {
+          if (result.error) {
+            // If `redirectToCheckout` fails due to a browser or network
+            // error, display the localized error message to your customer.
+            var displayError = document.getElementById('error-message');
+            displayError.textContent = result.error.message;
+          }
+        });
+    });
+  }
+  </script> -->
   <script>
   var stripe = Stripe('pk_live_sgTVYW0ilXei19B1KR6ngoj3');
 
-  var checkoutButton = document.getElementById('checkout-button-sku_FMgzePsAsBCM9g');
-  checkoutButton.addEventListener('click', function() {
-    // When the customer clicks on the button, redirect
-    // them to Checkout.
-    stripe.redirectToCheckout({
-        items: [{ sku: 'sku_FMgzePsAsBCM9g', quantity: 1 }],
+  var checkoutButtonList = ['checkout-button-1-sku_FMgzePsAsBCM9g', 'checkout-button-2-sku_FMgzePsAsBCM9g', 'checkout-button-3-sku_FMgzePsAsBCM9g'];
 
-        // Do not rely on the redirect to the successUrl for fulfilling
-        // purchases, customers may not always reach the success_url after
-        // a successful payment.
-        // Instead use one of the strategies described in
-        // https://stripe.com/docs/payments/checkout/fulfillment
-        successUrl: 'https://jonathanhorst.co/success.html',
-        cancelUrl: 'https://jonathanhorst.co/canceled.html',
-      })
-      .then(function(result) {
-        if (result.error) {
-          // If `redirectToCheckout` fails due to a browser or network
-          // error, display the localized error message to your customer.
-          var displayError = document.getElementById('error-message');
-          displayError.textContent = result.error.message;
-        }
-      });
-  });
+  for (var i = 0; i < checkoutButtonList.length; i++) {
+    var checkoutButton = document.getElementById(checkoutButtonList[i]);
+    checkoutButton.addEventListener('click', function() {
+      // When the customer clicks on the button, redirect
+      // them to Checkout.
+      stripe.redirectToCheckout({
+          items: [{ sku: 'sku_FMgzePsAsBCM9g', quantity: 1 }],
+
+          // Do not rely on the redirect to the successUrl for fulfilling
+          // purchases, customers may not always reach the success_url after
+          // a successful payment.
+          // Instead use one of the strategies described in
+          // https://stripe.com/docs/payments/checkout/fulfillment
+          successUrl: 'https://jonathanhorst.co/success.html',
+          cancelUrl: 'https://jonathanhorst.co/canceled.html',
+        })
+        .then(function(result) {
+          if (result.error) {
+            // If `redirectToCheckout` fails due to a browser or network
+            // error, display the localized error message to your customer.
+            var displayError = document.getElementById('error-message');
+            displayError.textContent = result.error.message;
+          }
+        });
+    });
+  }
   </script>
 </body>
 
