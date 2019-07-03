@@ -25,9 +25,17 @@ main,
   }
 }
 main {
+  h1 {
+    font-size: modular-scale(3);
+    font-weight: 700;
+  }
   h2,
   h3 {
     font-size: modular-scale(2);
+  }
+  h4 {
+    font-size: modular-scale(1);
+    font-weight: 700;
   }
   h2 {
     &:first-of-type {
@@ -36,6 +44,7 @@ main {
   }
   p,
   ul,
+  ol,
   hr {
     font-size: modular-scale(1);
     margin-bottom: 1em * $modular-scale-ratio;
@@ -49,8 +58,15 @@ main {
       margin-left: 1em;
     }
   }
-  li {
+  ul li,
+  ol li {
+    margin-bottom: 0.5em;
+  }
+  ul li {
     list-style: square outside;
+  }
+  ol li {
+    list-style: decimal outside;
   }
   a {
     padding-bottom: 0.1414em;
@@ -62,9 +78,10 @@ main {
     @include border-style(none none null none);
     border-bottom: solid 0.4rem $color-dark;
     @media (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi) {
+      (min-resolution: 192dpi) {
       @include border-width(null null 0.35rem null);
-    } // @  include respond-to('gamma') {
+    }
+    // @  include respond-to('gamma') {
     //   @include padding(3em null null null);
     // }
   }
@@ -81,5 +98,10 @@ main {
       font-family: "Roboto Mono", sans-serif;
       font-size: $modular-scale-ratio * 1rem;
     }
+  }
+}
+.sales-section {
+  h2 {
+    font-weight: 700;
   }
 }

@@ -1,0 +1,15 @@
+button {
+  display: inline-block;
+  background-color: $color-epsilon;
+  color: $color-light;
+  font-size: modular-scale(1);
+  padding: 1em 1.5em;
+  border: none;
+  transition: background-color 0.2s ease-out;
+  &:hover {
+    background-color: $shakespeare;
+  }
+  &.small {
+    font-size: 1.2rem;
+  }
+}
