@@ -34,16 +34,11 @@
   <meta name="twitter:description" content="Jonathan Horst is an e-commerce consultant helping brands capture missed online revenue.">
   <meta name="twitter:image" content="/dist/img/og-image.jpg">
   <meta name="twitter:site" content="@jonathanhorst">
-
-
-<script>
-var host = "jonathanhorst.co";
-if ((host == window.location.host) && (window.location.protocol != "https:"))
+  <script>
+  var host = "jonathanhorst.co";
+  if ((host == window.location.host) && (window.location.protocol != "https:"))
     window.location.protocol = "https";
-</script>
-
-
-
+  </script>
   <!-- Hotjar Tracking Code for jonathanhorst.co -->
   <script>
   (function(h, o, t, j, a, r) {
@@ -108,6 +103,8 @@ if ((host == window.location.host) && (window.location.protocol != "https:"))
       <p>Sure, you may have a great site— a beautiful site with wonderful content— but <strong>does it make you any money for your business?</strong> And if not, then why not, and <strong>how do you fix it?</strong> Even if you wanted to improve your website, most of us are left scratching our heads wondering where to even begin.</p>
       <p><strong>That&#8217;s where I come in.</strong></p>
       <p>I&#8217;ve built and optimized <strong>numerous very successful websites</strong> for myself and my clients over the last six years. I&#8217;ve learned, through experience, <strong>what it takes to build a website</strong> that doesn&#8217;t just look good, one that <strong>actually gets results.</strong></p>
+      <img src="dist/img/sales/screenshot-conversion rate.png" alt="Past client results">
+      <figcaption>Client results compared to their prior analytics</figcaption>
       <h3>How it works</h3>
       <p>After you&#8217;ve made your purchase, you&#8217;ll receive a welcome packet with these next steps:</p>
       <ol>
@@ -148,7 +145,8 @@ if ((host == window.location.host) && (window.location.protocol != "https:"))
       <h3>Can I buy now and book later?</h3>
       <p>Yes, when you purchase you&#8217;ll receive information on the next steps. You can always purchase a Website Review now and wait to act on it until a convenient time.</p>
       <h3>&#8220;What makes you qualified to tell me about my business and website?&#8221;</h3>
-      <p>I&#8217;ve been helping high-end e-commerce brands increase the profiitability of their sites for the better part of 6+ years now. I consistently help brands capture revenue left on the table.</p>
+      <p>I&#8217;ve been helping high-end e-commerce brands increase the profiitability of their sites for the better part of 6+ years . I consistently help brands capture revenue left on the table.</p>
+      <p><strong>I've helped sites more than double their online revenue and helped clients scale to nearly seven figures.</strong></p>
       <p>When you order a Website Review, you&#8217;re getting my full attention turned towards your website, with actionable, targeted, specific suggestions for what to change.</p>
       <h3>&#8220;What questions can this help me answer?&#8221;</h3>
       <p>A few example questions for <em>Website Reviews</em> clients.</p>
@@ -205,14 +203,14 @@ if ((host == window.location.host) && (window.location.protocol != "https:"))
       <h4>&#8220;How long does it take until I receive my Video Review and Executive Report?&#8221;</h4>
       <p>You&#8217;ll receive the deliverables from this service within ~5&#8211;7 business days. In case of any delays, I&#8217;ll reach out and keep you informed.</p>
       <figure>
-        <img src="/dist/img/jonathan-horst-headshot.jpg" width="300" alt="Jonathan Horst">
+        <img src="https://jonathanhorst.co/dist/img/jonathan-horst-headshot.jpg" width="300" alt="Jonathan Horst">
         <figcaption>Jonathan Horst</figcaption>
       </figure>
       <p>Have a burning question? Looking for some advice? Think of something that you&#8217;d love to see included with this service?</p>
       <p>Email me directly at <a href="mailto:&#106;&#111;&#110;&#097;&#116;&#104;&#097;&#110;&#064;&#106;&#111;&#110;&#097;&#116;&#104;&#097;&#110;&#104;&#111;&#114;&#115;&#116;&#046;&#099;&#111;">&#106;&#111;&#110;&#097;&#116;&#104;&#097;&#110;&#064;&#106;&#111;&#110;&#097;&#116;&#104;&#097;&#110;&#104;&#111;&#114;&#115;&#116;&#046;&#099;&#111;</a>.</p>
       <p>Sincerely,</p>
       <figure>
-        <img src="https://kaidavis.com/wp-content/uploads/signature-470x84.png" alt="" id="9" />
+        <img src="https://jonathanhorst.co/dist/img/jonathan-horst-signature.png" alt="signature" />
       </figure>
       <p>— Jonathan Horst</p>
     </div>
@@ -242,39 +240,6 @@ if ((host == window.location.host) && (window.location.protocol != "https:"))
 
   gtag('config', 'UA-48698625-1');
   </script>
-  <!-- <script>
-  var stripe = Stripe('pk_test_lIB6pp6fjnpOmW5mObe0WIAI');
-
-  var checkoutButtonList = ['checkout-button-1-sku_FMgzePsAsBCM9g', 'checkout-button-2-sku_FMgzePsAsBCM9g', 'checkout-button-3-sku_FMgzePsAsBCM9g'];
-
-  for (var i = 0; i < checkoutButtonList.length; i++) {
-    var checkoutButton = document.getElementById(checkoutButtonList[i]);
-
-    checkoutButton.addEventListener('click', function() {
-      // When the customer clicks on the button, redirect
-      // them to Checkout.
-      stripe.redirectToCheckout({
-          items: [{ sku: 'sku_FMwLgwIeILbYmg', quantity: 1 }],
-
-          // Do not rely on the redirect to the successUrl for fulfilling
-          // purchases, customers may not always reach the success_url after
-          // a successful payment.
-          // Instead use one of the strategies described in
-          // https://stripe.com/docs/payments/checkout/fulfillment
-          successUrl: 'https://jonathanhorst.co/success',
-          cancelUrl: 'https://jonathanhorst.co/canceled',
-        })
-        .then(function(result) {
-          if (result.error) {
-            // If `redirectToCheckout` fails due to a browser or network
-            // error, display the localized error message to your customer.
-            var displayError = document.getElementById('error-message');
-            displayError.textContent = result.error.message;
-          }
-        });
-    });
-  }
-  </script> -->
   <script>
   var stripe = Stripe('pk_live_sgTVYW0ilXei19B1KR6ngoj3');
 
@@ -293,7 +258,7 @@ if ((host == window.location.host) && (window.location.protocol != "https:"))
           // a successful payment.
           // Instead use one of the strategies described in
           // https://stripe.com/docs/payments/checkout/fulfillment
-          successUrl: 'https://jonathanhorst.co/success.html',
+          successUrl: 'https://jonathanhorst.co/website-review-success.html',
           cancelUrl: 'https://jonathanhorst.co/canceled.html',
         })
         .then(function(result) {
